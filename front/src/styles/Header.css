@@ -1,0 +1,81 @@
+/* 🌿 Modern Navbar (Nassim Store Theme) */
+.navbar-modern {
+  background: linear-gradient(90deg, #012B1F, #016450, #013B2F);
+  transition: all 0.4s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-modern.scrolled {
+  background: linear-gradient(90deg, #013B2F, #016450);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* 🌟 Brand Name */
+.navbar-brand {
+  color: #FFD43B !important; /* gold logo/name */
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #E50914 !important; /* red accent hover */
+}
+
+/* ✨ Text Gradient Accent */
+.text-gradient {
+  background: linear-gradient(90deg, #FFD43B, #E50914);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔗 Navbar Links */
+.nav-link {
+  color: #ffffffcc !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.nav-link:hover,
+.active-link {
+  color: #FFD43B !important;
+  border-bottom: 2px solid #FFD43B;
+  text-shadow: 0 0 8px rgba(255, 212, 59, 0.5);
+}
+
+/* 🛒 Cart Button */
+.btn-cart {
+  background-color: #FFD43B;
+  color: #013B2F;
+  padding: 6px 18px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 212, 59, 0.4);
+}
+
+.btn-cart:hover {
+  background-color: #E50914;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+
+/* 🔑 Login Button */
+.btn-login {
+  background: linear-gradient(135deg, #E50914, #b0070f);
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 212, 59, 0.3);
+}
+
+.btn-login:hover {
+  background: linear-gradient(135deg, #b0070f, #E50914);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(255, 212, 59, 0.5);
+}

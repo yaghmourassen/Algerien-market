@@ -1,0 +1,156 @@
+/* 🌿 Modern Footer (Nassim Store Theme) */
+.footer-modern {
+  background: linear-gradient(135deg, #012B1F, #016450, #013B2F);
+  color: #e5e7eb;
+  padding: 60px 0 25px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Subtle Glow Overlay */
+.footer-modern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 25%, rgba(255, 212, 59, 0.1), transparent 70%);
+  z-index: 0;
+}
+
+/* 🏷 Brand */
+.footer-logo {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #FFD43B; /* gold brand name */
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-desc {
+  color: #cfd3da;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 340px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 📘 Section Titles */
+.footer-title {
+  color: #FFD43B; /* golden accent */
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.6px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 🔗 Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-links a:hover {
+  color: #E50914; /* red hover */
+  padding-left: 6px;
+}
+
+/* 🌐 Social Icons */
+.social-icons a {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: #e5e7eb;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.social-icons a:hover {
+  color: #FFD43B;
+  transform: translateY(-3px);
+  text-shadow: 0 0 10px rgba(255, 212, 59, 0.5);
+}
+
+/* 📰 Newsletter */
+.footer-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-form input {
+  background-color: #ffffff;
+  border: none;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 20px;
+  flex: 1;
+  outline: none;
+}
+
+.footer-form input::placeholder {
+  color: #666;
+}
+
+.footer-form button {
+  background: linear-gradient(135deg, #E50914, #b0070f);
+  border: none;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 212, 59, 0.3);
+}
+
+.footer-form button:hover {
+  background: linear-gradient(135deg, #b0070f, #E50914);
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255, 212, 59, 0.5);
+}
+
+/* Divider */
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 40px 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ⚙️ Responsive */
+@media (max-width: 768px) {
+  .footer-modern {
+    text-align: center;
+  }
+
+  .footer-form {
+    flex-direction: column;
+  }
+
+  .footer-form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

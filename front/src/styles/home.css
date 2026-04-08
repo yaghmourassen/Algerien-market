@@ -1,0 +1,172 @@
+/* 🌐 Global Layout */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0b1512;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+section {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* 🌅 Hero Section */
+.hero-split {
+  background: linear-gradient(135deg, #013B2F, #01523E, #012B1F);
+  color: #ffffff;
+  padding: 6rem 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hero-split::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08), transparent 70%);
+  z-index: 0;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #FFD43B; /* golden title */
+}
+
+.hero-sub {
+  color: #dce8e1;
+  max-width: 520px;
+}
+
+.highlight {
+  color: #FFD43B;
+}
+
+/* 🔴🔥 Unified Button Style */
+.btn-primary-glow,
+.cta-modern .btn-light {
+  background: linear-gradient(135deg, #E50914, #b0070f);
+  color: #fff !important; /* ✅ force white text */
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 36px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 25px rgba(255, 212, 59, 0.3); /* subtle gold glow */
+  text-decoration: none; /* remove underline if it's a link */
+}
+
+.btn-primary-glow:hover,
+.cta-modern .btn-light:hover {
+  background: linear-gradient(135deg, #b0070f, #E50914);
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(255, 212, 59, 0.5);
+  color: #fff !important; /* ✅ keep white on hover too */
+}
+
+/* 🛍 Trending Now Section */
+.featured-modern {
+  background-color: #ffffff;
+  color: #000;
+  padding: 5rem 1rem;
+  border-radius: 20px;
+}
+
+.section-heading {
+  color: #013B2F;
+  font-weight: 700;
+}
+
+.section-sub {
+  color: #4d5b6a;
+}
+
+/* 🧱 Product Cards */
+.modern-card {
+  background: #ffffff;
+  border-radius: 16px;
+  min-width: 240px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #FFD43B; /* gold accent */
+}
+
+.modern-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(1, 43, 31, 0.25);
+}
+
+.modern-card h5 {
+  color: #013B2F;
+  font-weight: 600;
+}
+
+.price {
+  color: #FFD43B;
+  font-weight: 700;
+}
+
+/* 💡 Info Section */
+.info-split {
+  background: linear-gradient(135deg, #013B2F, #01523E);
+  color: #ffffff;
+  padding: 5rem 1rem;
+  border-radius: 20px;
+}
+
+.info-split h2 {
+  color: #FFD43B;
+}
+
+.info-split p {
+  color: #dce8e1;
+}
+
+.info-split li::before {
+  content: "✔ ";
+  color: #FFD43B;
+  font-weight: bold;
+}
+
+/* ⚡ CTA Section */
+.cta-modern {
+  background: linear-gradient(135deg, #013B2F, #01523E, #012B1F);
+  color: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 3rem 1rem 1rem 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cta-modern h2 {
+  color: #FFD43B;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .cta-modern h2 {
+    font-size: 1.6rem;
+  }
+}
