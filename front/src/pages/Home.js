@@ -6,13 +6,12 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/home.css";
 import { UserContext } from "../context/UserContext";
-import { addToCart } from "../api/cartapi"; // ⚡ تحديث المسار إذا لازم
 
 const Home = () => {
   const { user } = useContext(UserContext);
   const [products, setProducts] = useState([]);
 
-  // تحميل المنتجات عند البداية
+  // Load products
   useEffect(() => {
     loadProducts();
   }, []);
@@ -27,7 +26,7 @@ const Home = () => {
     }
   };
 
-  // ⚡ دالة لإضافة منتج للكارت
+  // 🛒 Add to cart (CART MICROSERVICE)
   const handleAddToCart = async (product) => {
     if (!user?.id) {
       alert("User ID not found. Cannot add to cart.");
@@ -35,7 +34,14 @@ const Home = () => {
     }
 
     try {
-      await addToCart(user.id, product.id, 1);
+      const res = await axios.post("http://localhost:4000/api/cart/add", {
+        userId: user.id,
+        productId: product.id,
+        quantity: 1,
+      });
+
+      console.log("Cart updated:", res.data);
+
       alert(`${product.name} added to cart!`);
     } catch (err) {
       console.error("❌ Add to cart failed:", err);
@@ -59,21 +65,29 @@ const Home = () => {
         <section className="featured-modern py-5">
           <div className="container">
             <h2 className="text-center mb-4">Trending Now</h2>
+
             <div className="scrollable-row d-flex flex-nowrap overflow-auto pb-3">
               {products.length > 0 ? (
                 products.map((product) => (
-                  <div key={product.id} className="modern-card me-4 flex-shrink-0">
+                  <div
+                    key={product.id}
+                    className="modern-card me-4 flex-shrink-0"
+                  >
                     <div className="modern-img">
                       {product.imageUrl ? (
                         <img
                           src={product.imageUrl}
                           alt={product.name || "Product"}
-                          style={{ maxHeight: "180px", objectFit: "cover" }}
+                          style={{
+                            maxHeight: "180px",
+                            objectFit: "cover",
+                          }}
                         />
                       ) : (
                         <span>No Image</span>
                       )}
                     </div>
+
                     <div className="modern-content text-center">
                       <h3>{product.name}</h3>
                       <p className="price">${product.price || "0.00"}</p>
